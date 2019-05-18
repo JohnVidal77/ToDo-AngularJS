@@ -4,11 +4,12 @@ const gulp = require('gulp'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
     file = require('gulp-file'),
-    process = require('process');
+    process = require('process'),
+    inject = require('gulp-inject-string');
 
 function serve() {
     return connect.server({
-        root: 'app',
+        root: './',
         livereload: true
     })
 }
@@ -18,13 +19,33 @@ function createModule() {
         controllerTmp = `(function(){\n     'use strict';\n     \n     angular\n         .module('app.${process.argv[4]}')\n         .controller('${nameFormated}Controller', ${nameFormated}Controller);\n         \n     ${nameFormated}Controller.$inject = [];\n     \n     /* @ngInject */\n     \n     function ${nameFormated}Controller(){\n         const vm = this;\n     }\n });`,
         moduleTmp = `(function() {\n    'use strict';\n\n    angular.module('app.${process.argv[4]}', [\n    ]);\n})();`,
         routeTmp = `(function () {\n    angular\n        .module('app.${process.argv[4]}')\n        .config(${nameFormated}Route);\n\n    ${nameFormated}Route.$inject = ['$stateProvider'];\n\n    function ${nameFormated}Route($stateProvider) {\n        $stateProvider.state('${process.argv[4]}', {\n            url: '/${process.argv[4]}',\n            templateUrl: "modules/${process.argv[4]}/${process.argv[4]}.tmp.html",\n            controller: '${nameFormated}Controller',\n            controllerAs: 'vm'\n        })\n    }\n})();`,
-        htmlTmp = ``;
+        emptyTmp = ``;
+
+    addModule(process.argv[4]);
+    addIndex(process.argv[4]);
 
     return file(`${process.argv[4]}.controller.js`, controllerTmp)
         .pipe(file(`${process.argv[4]}.module.js`, moduleTmp))
         .pipe(file(`${process.argv[4]}.route.js`, routeTmp))
-        .pipe(file(`${process.argv[4]}.tmp.html`, htmlTmp))
+        .pipe(file(`${process.argv[4]}.tmp.html`, emptyTmp))
+        .pipe(file(`${process.argv[4]}.scss`, emptyTmp))
          .pipe(gulp.dest(`./app/${process.argv[4]}`))
+}
+
+function addIndex(name) {
+    let importsScriptsTmp = `\n    <script src="app/${name}/${name}.module.js"></script>\n    <script src="app/${name}/${name}.controller.js"></script>\n    <script src="app/${name}/${name}.route.js"></script>\n`,
+        importsLinks = `\n    <link rel="stylesheet" href="app/${name}/${name}.css">`;
+    return gulp.src('./app/index.html')
+        .pipe(inject.after('<!--ImportsModule-->', importsScriptsTmp))
+        .pipe(inject.after('<!--ImportsCss-->', importsLinks))
+        .pipe(gulp.dest('./app'));
+}
+
+function addModule(name) {
+    return gulp.src('./app/app.module.js')
+        .pipe(inject.after('//NewModule', `\n        'app.${name}',\n`))
+        .pipe(gulp.dest('./app'));
+    
 }
 
 function reloadServe() {
@@ -51,7 +72,7 @@ function js() {
         .pipe(gulp.dest('./prod/js', { sourcemaps: true }))
 }
 
-function watcher() {
+function run() {
     serve();
     gulp.watch('./app/**/*.scss', gulp.series('css'));
     gulp.watch('./app/**/*.js', gulp.series('reloadServe'));
@@ -60,9 +81,11 @@ function watcher() {
 
 exports.serve = serve;
 exports.reloadServe = reloadServe;
+exports.addIndex = addIndex;
+exports.addModule = addModule;
 exports.html = html;
 exports.js = js;
 exports.css = css;
-exports.watcher = watcher;
+exports.run = run;
 exports.createModule = createModule;
 // exports.default = parallel(css, js);
