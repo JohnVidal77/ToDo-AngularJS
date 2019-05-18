@@ -2,7 +2,7 @@
 
 Basic ToDo app created with [AngularJS](https://angularjs.org/), [SASS](https://sass-lang.com/) and [Gulp](https://gulpjs.com/).
 
-##Installation
+## Installation
 
 Install project dependencies running:
 
@@ -10,7 +10,7 @@ Install project dependencies running:
 npm install
 ```
 
-##Gulp Commands
+## Gulp Commands
 
 To facilitate the development, there is some Gulp tasks that can help.
 
@@ -24,10 +24,10 @@ Use "createModule" to create new modules inside ./app with all necessary files a
 gulp createModule --name your-module-name
 ```
 
-##Project Structure
+## Project Structure
 
 Coming Soon
 
-##License
+## License
 
 [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
