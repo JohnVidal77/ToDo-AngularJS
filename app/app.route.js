@@ -1,21 +1,13 @@
 (function () {
+    console.log('route working');
+
     angular
         .module('app')
-        .config(AppRoute)
-        .run(AppRun);
+        .config(AppRoute);
 
-    AppRoute.$inject = ['$routeProvider', '$urlRouterProvider', '$locationProvider'];
+    AppRoute.$inject = ['$urlRouterProvider'];
 
-    function AppRoute($stateProvider, $urlRouterProvider, $locationProvider) {
-        $urlRouterProvider.otherwise('/');
-
-        $stateProvider
-            .state('home', {
-                url: '/',
-                templateUrl: 'home.html',
-                controller: 'HomeController'
-            });
-
-        $locationProvider.html5Mode(true);
+    function AppRoute($urlRouterProvider) {
+        $urlRouterProvider.otherwise('/login');
     }
-});
+})();

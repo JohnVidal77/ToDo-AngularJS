@@ -19,9 +19,9 @@ Use "run" to run the project with live reload and SASS compile.
 gulp run
 ```
 
-Use "createModule" to create new modules inside ./app with all necessary files and following the Naming Best Practices.
+Use "create" to create new modules inside ./app with all necessary files and following the Naming Best Practices.
 ```
-gulp createModule --name your-module-name
+gulp create --name your-module-name
 ```
 
 ## Project Structure
