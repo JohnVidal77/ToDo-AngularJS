@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
 
     <title>ToDone</title>
 
@@ -10,17 +20,30 @@
     <link rel="stylesheet" href="./app.css">
     <!--ImportsCss-->
     <link rel="stylesheet" href="./login/login.css">
+
+    <!-- Firebase Base -->
+    <script src="/__/firebase/6.0.3/firebase-app.js"></script>
+
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.0.3/firebase-auth.js"></script>
+<!--    <script defer src="/__/firebase/6.0.3/firebase-database.js"></script>-->
+<!--    <script defer src="/__/firebase/6.0.3/firebase-messaging.js"></script>-->
+<!--    <script defer src="/__/firebase/6.0.3/firebase-storage.js"></script>-->
+
+    <!--  Firebase Init  -->
+    <script src="/__/firebase/init.js"></script>
 </head>
 <body ng-app="app">
+<!--ANGULAR & DEPENDECIES-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
 <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
 
 <!--app-->
 <ui-view></ui-view>
-<!--<div ui-view id="mainViewer"></div>-->
 
 <script src="./app.module.js"></script>
 <script src="./app.route.js"></script>
+<script src="./app.config.js"></script>
 
 <!--ImportsModule-->
     <script src="./login/login.module.js"></script>
