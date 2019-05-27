@@ -61,7 +61,7 @@ function html() {
 }
 
 function css() {
-    return gulp.src(['./app/**/*.scss', './app/*.scss'])
+    return gulp.src(['./app/**/*.scss', './app/*.scss', '!./app/style/*', '!./app/style/**/*.scss'])
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest('./app'))
         .pipe(connect.reload());
@@ -89,5 +89,4 @@ exports.js = js;
 exports.css = css;
 exports.run = run;
 exports.create = create;
-
 // exports.default = parallel(css, js);

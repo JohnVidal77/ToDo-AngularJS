@@ -1,0 +1,18 @@
+@import "../fontSize";
+@import "../colors";
+
+button{
+  transition: 0.2s;
+  max-width: 200px !important;
+  font-size: $normal;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px $grey-color;
+  margin-bottom: 15px;
+
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}

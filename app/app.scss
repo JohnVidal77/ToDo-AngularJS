@@ -1,9 +1,3 @@
-*{
-  -webkit-overflow-scrolling: touch;
-}
-
-html, body{
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+@import 'style/reset';
+@import 'style/components/input';
+@import 'style/components/button';
