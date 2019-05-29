@@ -4,12 +4,13 @@
 button{
   transition: 0.2s;
   max-width: 200px !important;
-  font-size: $normal;
+  font-size: $small;
   padding: 10px;
   border: none;
   border-radius: 20px;
   box-shadow: 0 2px 5px $grey-color;
   margin-bottom: 15px;
+  text-transform: uppercase;
 
   &:hover{
     cursor: pointer;

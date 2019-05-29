@@ -34,8 +34,8 @@ function create() {
 }
 
 function addIndex(name) {
-    let importsScriptsTmp = `\n    <script src="./app/${name}/${name}.module.js"></script>\n    <script src="./app/${name}/${name}.controller.js"></script>\n    <script src="./app/${name}/${name}.route.js"></script>\n`,
-        importsLinks = `\n    <link rel="stylesheet" href="./app/${name}/${name}.css">`;
+    let importsScriptsTmp = `\n    <script src="./${name}/${name}.module.js"></script>\n    <script src="./${name}/${name}.controller.js"></script>\n    <script src="./${name}/${name}.route.js"></script>\n`,
+        importsLinks = `\n    <link rel="stylesheet" href="./${name}/${name}.css">`;
     return gulp.src('./app/index.html')
         .pipe(inject.after('<!--ImportsModule-->', importsScriptsTmp))
         .pipe(inject.after('<!--ImportsCss-->', importsLinks))
