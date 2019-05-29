@@ -1,0 +1,37 @@
+<div id="Register-Form">
+    <div>
+        <div class="topbar-modal">
+            <i ui-sref="login" class="fas fa-times"></i>
+        </div>
+
+        <div class="logo-container">
+            <img src="" alt="">
+        </div>
+
+        <form action="" class="register-container" name="registerForm">
+            <p>
+                Enter your email so we can send you a new password.
+            </p>
+
+            <div class="input-container">
+                <i ng-if="registerForm.nameRegister.$touched && registerForm.nameRegister.$invalid" class="icon-error fas fa-exclamation-triangle"></i>
+                <i ng-if="registerForm.nameRegister.$touched && registerForm.nameRegister.$valid" class="icon-success fas fa-check"></i>
+                <input type="text" name="nameRegister" placeholder="Nome" ng-model="vm.nameRegister" required>
+            </div>
+
+            <div class="input-container">
+                <i ng-if="registerForm.emailRegister.$touched && registerForm.emailRegister.$invalid" class="icon-error fas fa-exclamation-triangle"></i>
+                <i ng-if="registerForm.emailRegister.$touched && registerForm.emailRegister.$valid" class="icon-success fas fa-check"></i>
+                <input type="email" name="emailRegister" placeholder="Email" ng-model="vm.emailRegister" required>
+            </div>
+
+            <div class="input-container">
+                <i ng-if="registerForm.passwordRegister.$touched && registerForm.passwordRegister.$invalid" class="icon-error fas fa-exclamation-triangle"></i>
+                <i ng-if="registerForm.passwordRegister.$touched && registerForm.passwordRegister.$valid" class="icon-success fas fa-check"></i>
+                <input type="password" name="passwordRegister" placeholder="Email" ng-model="vm.passwordRegister" required>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</div>

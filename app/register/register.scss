@@ -1,0 +1,67 @@
+@import "../style/colors";
+@import "../style/fontSize";
+
+#Register-Form{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  >div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  >div >.topbar-modal {
+    top: 0;
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  >div >.topbar-modal >i{
+    transition: 0.2s;
+    margin-left: 15px;
+    color: $text-color;
+    font-size: $medium;
+
+    &:hover{
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  >div >.logo-container {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  >div >.logo-container >img{
+    width: 300px;
+  }
+
+  >div >.register-container {
+    margin: 0 auto;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  >div >.register-container >*{
+    flex: 0 0 100%;
+    max-width: 250px;
+  }
+
+  >div >.register-container >p{
+    text-align: center;
+  }
+
+  >div >.register-container >button{
+    color: white;
+    background-image: $gradient-orange;
+  }
+
+}

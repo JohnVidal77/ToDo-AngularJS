@@ -29,6 +29,11 @@ html, body {
     position: absolute;
     top: 10px;
     right: 10px; }
+  .input-container > .icon-success {
+    color: #2e7d32;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
 
 button {
   transition: 0.2s;

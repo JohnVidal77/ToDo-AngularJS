@@ -1,0 +1,42 @@
+#Register-Form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  #Register-Form > div {
+    flex: 0 0 100%;
+    max-width: 100%; }
+  #Register-Form > div > .topbar-modal {
+    top: 0;
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    padding: 15px 0; }
+  #Register-Form > div > .topbar-modal > i {
+    transition: 0.2s;
+    margin-left: 15px;
+    color: #212121;
+    font-size: 1.5rem; }
+    #Register-Form > div > .topbar-modal > i:hover {
+      cursor: pointer;
+      opacity: 0.8; }
+  #Register-Form > div > .logo-container {
+    text-align: center;
+    margin: 30px 0; }
+  #Register-Form > div > .logo-container > img {
+    width: 300px; }
+  #Register-Form > div > .register-container {
+    margin: 0 auto;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  #Register-Form > div > .register-container > * {
+    flex: 0 0 100%;
+    max-width: 250px; }
+  #Register-Form > div > .register-container > p {
+    text-align: center; }
+  #Register-Form > div > .register-container > button {
+    color: white;
+    background-image: linear-gradient(-90deg, #FF9800, #fc4a1a); }
