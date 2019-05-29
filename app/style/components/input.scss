@@ -1,11 +1,25 @@
 @import "../fontSize";
 @import "../colors";
 
-input {
-  font-size: $normal;
-  padding: 10px;
-  border-radius: 25px;
-  border: none;
-  box-shadow: 0 2px 5px $grey-color;
-  margin-bottom: 15px;
+
+.input-container {
+  position: relative;
+  display: flex;
+
+  >input {
+    width: 100%;
+    font-size: $normal;
+    padding: 10px 0 10px 10px;;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 1px 5px $grey-color;
+    margin-bottom: 15px;
+  }
+
+  >.icon-error {
+    color: $error-color;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 }

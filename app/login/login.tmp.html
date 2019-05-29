@@ -1,7 +1,22 @@
 <div id="Login-Form">
-    <form class="login-container" action="">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button type="submit">Login</button>
-    </form>
+    <div>
+        <div class="logo-container">
+            <img ng-src="{{vm.logoUrl}}" alt="Logo ToDone">
+        </div>
+        <form class="login-container" name="login" ng-submit="vm.onClick_login()" novalidate>
+            <div class="input-container">
+                <i ng-if="login.emailLogin.$touched && login.emailLogin.$invalid" class="icon-error fas fa-exclamation-triangle"></i>
+                <input type="email" name="emailLogin" placeholder="Email" ng-model="vm.emailLogin" required>
+            </div>
+
+            <div class="input-container">
+                <i ng-if="login.passwordLogin.$touched && login.passwordLogin.$invalid" class="icon-error fas fa-exclamation-triangle"></i>
+                <input type="password" name="passwordLogin" placeholder="Password" ng-model="vm.passwordLogin" minlength="6" required>
+            </div>
+
+            <button type="submit">Login</button>
+            <span>Don't have an account?<br/> <a href="">Create your account</a></span>
+            <a href="">Forgot Password?</a>
+        </form>
+    </div>
 </div>

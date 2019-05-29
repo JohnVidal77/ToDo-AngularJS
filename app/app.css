@@ -1,19 +1,34 @@
 * {
-  -webkit-overflow-scrolling: touch; }
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  -moz-osx-font-scrolling: touchs; }
 
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-size: 16px; }
-
-input {
   font-size: 1rem;
-  padding: 10px;
-  border-radius: 25px;
-  border: none;
-  box-shadow: 0 2px 5px #757575;
-  margin-bottom: 15px; }
+  font-family: "Roboto", sans-serif !important;
+  color: #212121;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.input-container {
+  position: relative;
+  display: flex; }
+  .input-container > input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 0 10px 10px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 1px 5px #757575;
+    margin-bottom: 15px; }
+  .input-container > .icon-error {
+    color: #d50000;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
 
 button {
   transition: 0.2s;
@@ -25,5 +40,12 @@ button {
   box-shadow: 0 2px 5px #757575;
   margin-bottom: 15px; }
   button:hover {
+    cursor: pointer;
+    opacity: 0.8; }
+
+a {
+  transition: 0.2s;
+  text-decoration: none; }
+  a:hover {
     cursor: pointer;
     opacity: 0.8; }

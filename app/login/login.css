@@ -3,19 +3,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
-  #Login-Form > .login-container {
+  flex-wrap: wrap; }
+  #Login-Form > div {
+    flex: 0 0 100%;
+    max-width: 100%; }
+  #Login-Form > div > .logo-container {
+    text-align: center;
+    margin: 30px 0; }
+  #Login-Form > div > .logo-container > img {
+    width: 300px; }
+  #Login-Form > div > .login-container {
+    margin: 0 auto;
+    width: 300px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
-  #Login-Form > .login-container > * {
+  #Login-Form > div > .login-container > * {
     flex: 0 0 100%;
     max-width: 250px; }
-  #Login-Form > .login-container > button {
+  #Login-Form > div > .login-container > button {
     color: white;
     background-image: linear-gradient(-90deg, #FF9800, #fc4a1a); }
+  #Login-Form > div > .login-container > span {
+    text-align: center;
+    margin-bottom: 15px; }
+  #Login-Form > div > .login-container > span > a {
+    color: #FF9800; }
+  #Login-Form > div > .login-container > a {
+    position: absolute;
+    bottom: 15px;
+    color: #FF9800;
+    text-align: center; }
 
 @media screen and (min-width: 768px) {
   #Login-Form > .login-container > * {
     flex: 0 0 100%;
-    max-width: 100%; } }
+    max-width: 300px; } }
