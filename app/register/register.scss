@@ -63,5 +63,18 @@
     color: white;
     background-image: $gradient-orange;
   }
+}
 
+@media screen and (min-width: 768px) {
+  #Register-Form{
+    >div >.topbar-modal >i{
+      margin-left: 25px;
+      font-size: $x-big;
+    }
+
+    >div >.register-container >*{
+      flex: 0 0 100%;
+      max-width: 300px;
+    }
+  }
 }
