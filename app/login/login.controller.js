@@ -12,7 +12,7 @@
      function LoginController(){
          const vm = this;
 
-         vm.logoUrl = "https://media.wired.com/photos/5926838bcefba457b079a3ce/master/pass/slack-lead1.jpg";
+         vm.logoUrl = "assets/logo/logo-orange.svg";
 
          vm.onClick_login = onClick_login;
 
