@@ -1,0 +1,22 @@
+@import "../../style/colors";
+@import "../../style/fontSize";
+
+#Topbar-Modal {
+  top: 0;
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  padding: 15px 0;
+
+  >i {
+    transition: 0.2s;
+    margin-left: 15px;
+    color: $text-color;
+    font-size: $medium;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}

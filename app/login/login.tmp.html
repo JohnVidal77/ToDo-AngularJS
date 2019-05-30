@@ -15,8 +15,8 @@
             </div>
 
             <button type="submit">Login</button>
-            <span>Don't have an account?<br/> <a ui-sref="register">Create your account</a></span>
-            <a ui-sref="forgot-password">Forgot Password?</a>
+            <span>Don't have an account?<br/> <a ng-click="vm.onClick_ChangeRoute('register')">Create your account</a></span>
+            <a ng-click="vm.onClick_ChangeRoute('forgot-password')">Forgot Password?</a>
         </form>
     </div>
 </div>

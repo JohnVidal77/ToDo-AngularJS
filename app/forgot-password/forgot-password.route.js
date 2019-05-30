@@ -9,9 +9,19 @@
         $stateProvider.state('forgot-password', {
             name: 'forgot-password',
             url: '/forgot-password',
-            templateUrl: "forgot-password/forgot-password.tmp.html",
-            controller: 'ForgotPasswordController',
-            controllerAs: 'vm'
+            views: {
+                '': {
+                    templateUrl: "forgot-password/forgot-password.tmp.html",
+                    controller: 'ForgotPasswordController',
+                    controllerAs: 'vm'
+                },
+
+                'navbar-modal@forgot-password': {
+                    templateUrl: "components/navbar-modal/navbar-modal.html",
+                    controller: 'NavbarModalController',
+                    controllerAs: 'vm'
+                }
+            }
         })
     }
 })();

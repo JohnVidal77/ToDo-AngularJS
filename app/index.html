@@ -15,14 +15,19 @@
 
     <title>ToDone</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">-->
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./app.css">
     <!--ImportsCss-->
+    <link rel="stylesheet" href="./dashboard/dashboard.css">
     <link rel="stylesheet" href="./register/register.css">
     <link rel="stylesheet" href="./forgot-password/forgot-password.css">
     <link rel="stylesheet" href="./login/login.css">
+    <link rel="stylesheet" href="./components/navbar-modal/navbar-modal.css">
+    <link rel="stylesheet" href="./components/navbar/navbar.css">
 
     <!-- Firebase Base -->
     <script src="/__/firebase/6.0.3/firebase-app.js"></script>
@@ -48,7 +53,22 @@
 <script src="./app.route.js"></script>
 <script src="./app.config.js"></script>
 
+<!--Services-->
+<script src="./services/service.module.js"></script>
+<script src="./services/route.service.js"></script>
+
+<!--Components-->
+<script src="./components/navbar/navbar.module.js"></script>
+<script src="./components/navbar/navbar.components.js"></script>
+
+<script src="./components/navbar-modal/navbar-modal.module.js"></script>
+<script src="./components/navbar-modal/navbar-modal.components.js"></script>
+
 <!--ImportsModule-->
+    <script src="./dashboard/dashboard.module.js"></script>
+    <script src="./dashboard/dashboard.controller.js"></script>
+    <script src="./dashboard/dashboard.route.js"></script>
+
     <script src="./register/register.module.js"></script>
     <script src="./register/register.controller.js"></script>
     <script src="./register/register.route.js"></script>

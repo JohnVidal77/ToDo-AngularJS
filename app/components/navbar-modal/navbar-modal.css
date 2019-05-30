@@ -1,0 +1,14 @@
+#Topbar-Modal {
+  top: 0;
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  padding: 15px 0; }
+  #Topbar-Modal > i {
+    transition: 0.2s;
+    margin-left: 15px;
+    color: #212121;
+    font-size: 1.5rem; }
+    #Topbar-Modal > i:hover {
+      cursor: pointer;
+      opacity: 0.8; }
