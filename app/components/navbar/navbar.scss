@@ -55,12 +55,24 @@
   }
 }
 
+#Overlay{
+  transition: opacity .5s, top 50ms;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  z-index: 5;
+  background-color: $text-color;
+  opacity: 0;
+}
+
 #Sidenav{
   -moz-transition: .5s;
   -webkit-transition: .5s;
   transition: .5s;
 
   position: fixed;
+  z-index: 10;
   top: 0;
   left: -100%;
   width: 70%;
@@ -131,6 +143,7 @@
   transition: .5s;
 
   position: fixed;
+  z-index: 10;
   top: 0;
   right: -100%;
   width: 70%;
