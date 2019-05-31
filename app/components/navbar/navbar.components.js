@@ -20,13 +20,11 @@
         vm.closeSide = closeSide;
 
         function openNav() {
-            document.getElementById("Sidenav").style.width = "70%";
-            document.getElementById("Sidenav").style.display = "block";
+            document.getElementById("Sidenav").style.left = "0";
         }
-        
+
         function closeSide() {
-            document.getElementById("Sidenav").style.width = "0";
-            document.getElementById("Sidenav").style.display = "none";
+            document.getElementById("Sidenav").style.left = "-26%";
         }
     }
 })();
