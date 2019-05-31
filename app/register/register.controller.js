@@ -12,6 +12,6 @@
      function RegisterController(){
          const vm = this;
 
-         vm.logoUrl = "assets/logo/logo-orange.svg";
+         vm.logoUrl = window.__env.currentLogo;
      }
  })();

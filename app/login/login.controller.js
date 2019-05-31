@@ -12,7 +12,7 @@
      function LoginController(serviceRoute){
          const vm = this;
 
-         vm.logoUrl = "assets/logo/logo-orange.svg";
+         vm.logoUrl = window.__env.currentLogo;
 
          vm.onClick_login = onClick_login;
          vm.onClick_ChangeRoute = serviceRoute.changeRoute;

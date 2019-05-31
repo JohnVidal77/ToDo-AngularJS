@@ -1,6 +1,6 @@
 <div id="Navbar">
     <div>
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars" ng-click="vm.openNav()"></i>
     </div>
 
     <div>
@@ -15,7 +15,7 @@
 
 <div id="Sidenav">
     <div>
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times" ng-click="vm.closeSide()"></i>
     </div>
 
     <div>
@@ -24,8 +24,12 @@
     </div>
 
     <div>
-        <a href="">Dashboard</a>
+        <a ng-class="vm.currentState.includes('dashboard') ? 'active' : ''" href="">Dashboard</a>
         <a href="">Perfil</a>
         <a href="">Metas</a>
+    </div>
+
+    <div>
+        <a><i class="fas fa-sign-out-alt"></i> logout</a>
     </div>
 </div>

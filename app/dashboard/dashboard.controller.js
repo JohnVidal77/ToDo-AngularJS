@@ -5,11 +5,11 @@
          .module('app.dashboard')
          .controller('DashboardController', DashboardController);
          
-     DashboardController.$inject = [];
+     DashboardController.$inject = ['$state'];
      
      /* @ngInject */
      
-     function DashboardController(){
+     function DashboardController($state){
          const vm = this;
      }
  })();

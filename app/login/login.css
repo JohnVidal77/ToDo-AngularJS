@@ -23,16 +23,16 @@
     max-width: 250px; }
   #Login-Form > div > .login-container > button {
     color: white;
-    background-image: linear-gradient(-90deg, #FF9800, #fc4a1a); }
+    background-image: linear-gradient(-90deg, #E91E63, #bc4e9c); }
   #Login-Form > div > .login-container > span {
     text-align: center;
     margin-bottom: 15px; }
   #Login-Form > div > .login-container > span > a {
-    color: #FF9800; }
+    color: #E91E63; }
   #Login-Form > div > .login-container > a {
     position: absolute;
     bottom: 15px;
-    color: #FF9800;
+    color: #E91E63;
     text-align: center; }
 
 @media screen and (min-width: 768px) {

@@ -59,9 +59,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 0;
+  display: none;
   max-width: 320px;
-  width: 70%;
-  padding: 20px;
+  padding: 0 20px;
   height: 100%;
   background-color: white;
   box-shadow: 5px 0 5px $grey-color;
@@ -73,6 +74,7 @@
 
     &:first-child{
       text-align: left;
+      margin-top: 20px;
     }
   }
 
@@ -82,6 +84,11 @@
 
   >div >i{
     font-size: $medium;
+
+    &:hover{
+      opacity: 0.8;
+      cursor: pointer;
+    }
   }
 
   >div >img {
@@ -92,6 +99,25 @@
 
   >div >a{
     display: block;
+    padding: 10px;
+    color: $text-color;
+    border-radius: 10px;
+  }
+
+  >div >.active{
+    background-image: $gradient-pink;
+    color: white;
+  }
+
+  >div:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 85%;
+  }
+
+  >div:last-child >a {
+    background-color: $grey-light-color;
+    color: white;
   }
 }
 
@@ -104,6 +130,14 @@
       height: 14px;
       right: 20px;
       top: 35px
+    }
+  }
+
+  #Sidenav{
+    >div:last-child {
+      position: absolute;
+      bottom: 0;
+      width: 320px;
     }
   }
 }
