@@ -36,11 +36,13 @@
     border-radius: 16px; }
 
 #Sidenav {
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
   transition: .5s;
   position: fixed;
   top: 0;
-  left: -30%;
-  width: 320px;
+  left: -100%;
+  width: 70%;
   max-width: 320px;
   padding: 0 20px;
   height: 100%;

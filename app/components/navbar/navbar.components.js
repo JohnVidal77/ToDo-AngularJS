@@ -24,7 +24,7 @@
         }
 
         function closeSide() {
-            document.getElementById("Sidenav").style.left = "-26%";
+            document.getElementById("Sidenav").style.left = "-100%";
         }
     }
 })();
