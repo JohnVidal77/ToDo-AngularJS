@@ -22,6 +22,7 @@
         vm.closeNotification = closeNotification;
         vm.showOverlay = showOverlay;
         vm.hideOverlay = hideOverlay;
+        vm.closeAllOverlay = closeAllOverlay;
 
         function openSide() {
             document.getElementById("Sidenav").style.left = "0";
@@ -51,6 +52,12 @@
         function hideOverlay() {
             document.getElementById("Overlay").style.top = "-100%";
             document.getElementById("Overlay").style.opacity = "0";
+        }
+
+        function closeAllOverlay() {
+            vm.hideOverlay();
+            document.getElementById("Notification").style.right = "-100%";
+            document.getElementById("Sidenav").style.left = "-100%";
         }
     }
 })();
