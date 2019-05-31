@@ -1,6 +1,6 @@
 <div id="Navbar">
     <div>
-        <i class="fas fa-bars" ng-click="vm.openNav()"></i>
+        <i class="fas fa-bars" ng-click="vm.openSide()"></i>
     </div>
 
     <div>
@@ -8,8 +8,22 @@
     </div>
 
     <div>
-        <i class="fas fa-bell"></i>
+        <i class="fas fa-bell" ng-click="vm.openNotification()"></i>
         <div></div>
+    </div>
+</div>
+
+<div id="Notification">
+    <div>
+        <i class="fas fa-times" ng-click="vm.closeNotification()"></i>
+    </div>
+
+    <div>
+        <h3>Notification</h3>
+    </div>
+
+    <div>
+
     </div>
 </div>
 

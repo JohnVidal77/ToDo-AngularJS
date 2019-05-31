@@ -125,6 +125,43 @@
   }
 }
 
+#Notification{
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  max-width: 320px;
+  padding: 0 20px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -5px 0 5px $grey-color;
+
+  >div{
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: 0.5s;
+
+    &:first-child{
+      text-align: left;
+      margin-top: 20px;
+    }
+  }
+
+  >div >i{
+    font-size: $medium;
+
+    &:hover{
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   #Navbar{
     font-size: $medium;
