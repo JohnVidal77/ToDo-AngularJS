@@ -9,16 +9,24 @@
             </svg>
         </div>
         <ul class="list-days">
-            <li>
+            <li ng-if="vm.tasks.today.length">
                 Today
-                <ul class="list-task-day">
-                    <li><p class="task-complete">Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</p></li>
-                    <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</p></li>
-                    <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</p></li>
+                <ul ng-repeat="task in vm.tasks.today" class="list-task-day">
+                    <li><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
                 </ul>
             </li>
-            <li>Tomorrow</li>
-            <li>Month</li>
+            <li ng-if="vm.tasks.tomorrow.length">
+                Tomorrow
+                <ul ng-repeat="task in vm.tasks.tomorrow" class="list-task-day">
+                    <li><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
+                </ul>
+            </li>
+            <li ng-if="vm.tasks.month.length">
+                Month
+                <ul ng-repeat="task in vm.tasks.month" class="list-task-day">
+                    <li><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>

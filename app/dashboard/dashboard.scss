@@ -79,5 +79,10 @@
       max-width: 100%;
       height: 100px;
     }
+
+    >.task-container >.btn-filter >svg {
+      width: 32px;
+      height: 32px;
+    }
   }
 }

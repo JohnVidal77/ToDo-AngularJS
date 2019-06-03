@@ -12,6 +12,16 @@
      function DashboardController($state){
          const vm = this;
 
-         // vm.onClick_focusScroll = (idBtn) => document.getElementById(idBtn).scrollIntoView();
+         let tasks = {
+             today: [
+                 {name: 'task 1', completed: false},
+                 {name: 'task 2', completed: true},
+                 {name: 'task 3', completed: false}
+             ],
+             tomorrow: [],
+             month: []
+         }
+
+         vm.tasks = tasks
      }
  })();
