@@ -29,7 +29,7 @@
   #Navbar > div:last-child > div {
     width: 10px;
     height: 10px;
-    background-image: linear-gradient(-90deg, #FF9800, #fc4a1a);
+    background-image: linear-gradient(-90deg, #E91E63, #bc4e9c);
     position: absolute;
     top: 27px;
     right: 23px;

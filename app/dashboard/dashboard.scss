@@ -1,0 +1,83 @@
+@import "../style/colors";
+@import "../style/fontSize";
+
+#Dashboard{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 70px;
+
+  >div{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    height: 100px;
+  }
+
+  >.task-container >.btn-filter {
+    text-align: right;
+  }
+
+  >.task-container >.btn-filter >svg {
+    width:24px;
+    height:24px;
+    text-align: right;
+    padding-right: 20px;
+
+    &:hover{
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  >.task-container >.list-days {
+    font-size: $normal;
+    list-style: none;
+    font-weight: bold;
+    padding-left: 30px;
+  }
+
+  >.task-container >.list-days >li {
+    margin-bottom: 20px;
+  }
+
+  >.task-container >.list-days >li >.list-task-day{
+    list-style: none;
+    font-weight: normal;
+    padding-left: 20px;
+  }
+
+  >.task-container >.list-days >li >.list-task-day >li {
+    margin-bottom: 10px;
+
+    &:hover{
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    &:first-child{
+      margin-top: 10px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  >.task-container >.list-days >li >.list-task-day >li >.task-complete {
+    text-decoration: line-through $thrid-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #Dashboard{
+    >div {
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      max-width: 100%;
+      height: 100px;
+    }
+  }
+}

@@ -11,5 +11,7 @@
      
      function DashboardController($state){
          const vm = this;
+
+         // vm.onClick_focusScroll = (idBtn) => document.getElementById(idBtn).scrollIntoView();
      }
  })();
