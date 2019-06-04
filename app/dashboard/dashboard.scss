@@ -16,6 +16,61 @@
     height: 100px;
   }
 
+  >.info-container {
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-style: auto;
+    overflow-x: scroll;
+    scroll-snap-type: both mandatory;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+
+  >.info-container >div {
+    scroll-snap-align: start;
+    display: inline-block;
+    width: 100%;
+  }
+
+  >.info-container >div >.cards {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 3px;
+    text-align: center;
+    color: white;
+    height: 90px;
+  }
+
+  >.info-container >div >.card-1 {
+    background-image: $gradient-pink;
+  }
+
+  >.info-container >div >.card-2 {
+    background-image: $gradient-blue;
+  }
+
+  >.info-container >div >.card-3 {
+    background-image: $gradient-pink;
+  }
+
+  >.info-container >div >.card-4 {
+    background-image: $gradient-blue;
+  }
+
+  >.info-container >div >.cards >span{
+    font-size: $big;
+    font-weight: bold;
+  }
+
+  >.info-container >div >.cards >p{
+    text-transform: uppercase;
+    margin: 0;
+  }
+
   >.task-container >.btn-filter {
     text-align: right;
   }
@@ -78,6 +133,36 @@
       flex-grow: 1;
       max-width: 100%;
       height: 100px;
+    }
+
+    >.info-container {
+      overflow-x: initial;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-left: 5px;
+    }
+
+    >.info-container >div {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    >.info-container >div >.card-1 {
+      background-image: $gradient-pink;
+    }
+
+    >.info-container >div >.card-2 {
+      background-image: $gradient-blue;
+    }
+
+    >.info-container >div >.card-3 {
+      background-image: $gradient-blue;
+    }
+
+    >.info-container >div >.card-4 {
+      background-image: $gradient-pink;
     }
 
     >.task-container >.btn-filter >svg {
