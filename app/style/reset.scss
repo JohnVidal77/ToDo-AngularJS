@@ -4,7 +4,7 @@
 *{
   overflow-scrolling: touch;
   -webkit-overflow-scrolling: touch;
-  -moz-osx-font-scrolling: touchs;
+  -moz-osx-font-scrolling: touch;
 }
 
 html, body{
@@ -16,4 +16,5 @@ html, body{
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }

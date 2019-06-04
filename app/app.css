@@ -1,7 +1,7 @@
 * {
   overflow-scrolling: touch;
   -webkit-overflow-scrolling: touch;
-  -moz-osx-font-scrolling: touchs; }
+  -moz-osx-font-scrolling: touch; }
 
 html, body {
   margin: 0;
@@ -11,7 +11,8 @@ html, body {
   font-family: "Noto Sans", sans-serif !important;
   color: #212121;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; }
 
 .input-container {
   position: relative;

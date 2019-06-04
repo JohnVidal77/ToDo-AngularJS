@@ -13,10 +13,9 @@
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 10px;
-    height: 100px;
   }
 
-  >.info-container {
+  >.info-container >.cards-container {
     width: 100%;
     height: 100%;
     white-space: nowrap;
@@ -30,13 +29,13 @@
     }
   }
 
-  >.info-container >div {
+  >.info-container >.cards-container >div {
     scroll-snap-align: start;
     display: inline-block;
     width: 100%;
   }
 
-  >.info-container >div >.cards {
+  >.info-container >.cards-container >div >.cards {
     padding: 20px;
     border-radius: 10px;
     margin: 3px;
@@ -45,28 +44,28 @@
     height: 90px;
   }
 
-  >.info-container >div >.card-1 {
+  >.info-container >.cards-container >div >.card-1 {
     background-image: $gradient-pink;
   }
 
-  >.info-container >div >.card-2 {
+  >.info-container >.cards-container >div >.card-2 {
     background-image: $gradient-blue;
   }
 
-  >.info-container >div >.card-3 {
+  >.info-container >.cards-container >div >.card-3 {
     background-image: $gradient-pink;
   }
 
-  >.info-container >div >.card-4 {
+  >.info-container >.cards-container >div >.card-4 {
     background-image: $gradient-blue;
   }
 
-  >.info-container >div >.cards >span{
+  >.info-container >.cards-container >div >.cards >span{
     font-size: $big;
     font-weight: bold;
   }
 
-  >.info-container >div >.cards >p{
+  >.info-container >.cards-container >div >.cards >p{
     text-transform: uppercase;
     margin: 0;
   }
@@ -132,10 +131,9 @@
       -ms-flex-positive: 1;
       flex-grow: 1;
       max-width: 100%;
-      height: 100px;
     }
 
-    >.info-container {
+    >.info-container >.cards-container {
       overflow-x: initial;
       display: -ms-flexbox;
       display: flex;
@@ -144,25 +142,16 @@
       margin-left: 5px;
     }
 
-    >.info-container >div {
+    >.info-container >.cards-container >div {
       flex: 0 0 50%;
       max-width: 50%;
     }
 
-    >.info-container >div >.card-1 {
-      background-image: $gradient-pink;
-    }
-
-    >.info-container >div >.card-2 {
-      background-image: $gradient-blue;
-    }
-
-    >.info-container >div >.card-3 {
-      background-image: $gradient-blue;
-    }
-
-    >.info-container >div >.card-4 {
-      background-image: $gradient-pink;
+    >.info-container >.cards-container >div >.card-1, >.info-container >.cards-container >div >.card-2, >.info-container >.cards-container >div >.card-3, >.info-container >.cards-container >div >.card-4 {
+      background-image: none;
+      background-color: white;
+      box-shadow: 0 0 5px $grey-light-color;
+      color: $text-color;
     }
 
     >.task-container >.btn-filter >svg {

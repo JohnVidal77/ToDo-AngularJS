@@ -8,9 +8,8 @@
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 10px;
-    height: 100px; }
-  #Dashboard > .info-container {
+    margin-bottom: 10px; }
+  #Dashboard > .info-container > .cards-container {
     width: 100%;
     height: 100%;
     white-space: nowrap;
@@ -18,31 +17,31 @@
     overflow-style: auto;
     overflow-x: scroll;
     scroll-snap-type: both mandatory; }
-    #Dashboard > .info-container::-webkit-scrollbar {
+    #Dashboard > .info-container > .cards-container::-webkit-scrollbar {
       display: none; }
-  #Dashboard > .info-container > div {
+  #Dashboard > .info-container > .cards-container > div {
     scroll-snap-align: start;
     display: inline-block;
     width: 100%; }
-  #Dashboard > .info-container > div > .cards {
+  #Dashboard > .info-container > .cards-container > div > .cards {
     padding: 20px;
     border-radius: 10px;
     margin: 3px;
     text-align: center;
     color: white;
     height: 90px; }
-  #Dashboard > .info-container > div > .card-1 {
+  #Dashboard > .info-container > .cards-container > div > .card-1 {
     background-image: linear-gradient(-90deg, #E91E63, #bc4e9c); }
-  #Dashboard > .info-container > div > .card-2 {
+  #Dashboard > .info-container > .cards-container > div > .card-2 {
     background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
-  #Dashboard > .info-container > div > .card-3 {
+  #Dashboard > .info-container > .cards-container > div > .card-3 {
     background-image: linear-gradient(-90deg, #E91E63, #bc4e9c); }
-  #Dashboard > .info-container > div > .card-4 {
+  #Dashboard > .info-container > .cards-container > div > .card-4 {
     background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
-  #Dashboard > .info-container > div > .cards > span {
+  #Dashboard > .info-container > .cards-container > div > .cards > span {
     font-size: 2rem;
     font-weight: bold; }
-  #Dashboard > .info-container > div > .cards > p {
+  #Dashboard > .info-container > .cards-container > div > .cards > p {
     text-transform: uppercase;
     margin: 0; }
   #Dashboard > .task-container > .btn-filter {
@@ -83,26 +82,22 @@
     flex-basis: 0;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    max-width: 100%;
-    height: 100px; }
-  #Dashboard > .info-container {
+    max-width: 100%; }
+  #Dashboard > .info-container > .cards-container {
     overflow-x: initial;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-left: 5px; }
-  #Dashboard > .info-container > div {
+  #Dashboard > .info-container > .cards-container > div {
     flex: 0 0 50%;
     max-width: 50%; }
-  #Dashboard > .info-container > div > .card-1 {
-    background-image: linear-gradient(-90deg, #E91E63, #bc4e9c); }
-  #Dashboard > .info-container > div > .card-2 {
-    background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
-  #Dashboard > .info-container > div > .card-3 {
-    background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
-  #Dashboard > .info-container > div > .card-4 {
-    background-image: linear-gradient(-90deg, #E91E63, #bc4e9c); }
+  #Dashboard > .info-container > .cards-container > div > .card-1, #Dashboard > .info-container > .cards-container > div > .card-2, #Dashboard > .info-container > .cards-container > div > .card-3, #Dashboard > .info-container > .cards-container > div > .card-4 {
+    background-image: none;
+    background-color: white;
+    box-shadow: 0 0 5px #b6b6b6;
+    color: #212121; }
   #Dashboard > .task-container > .btn-filter > svg {
     width: 32px;
     height: 32px; } }
