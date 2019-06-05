@@ -36,7 +36,7 @@
 
   >div >.login-container >button{
     color: white;
-    background-image: $gradient-pink;
+      background-image: $gradient-blue;
   }
 
   >div >.login-container >span{
@@ -45,13 +45,13 @@
   }
 
   >div >.login-container >span >a{
-    color: $thrid-color;
+    color: $primary-color;
   }
 
   >div >.login-container >a{
     position: absolute;
     bottom: 15px;
-    color: $thrid-color;
+    color: $primary-color;
     text-align: center;
   }
 }

@@ -9,6 +9,8 @@
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 10px; }
+  #Dashboard > .info-container > .chart-container {
+    display: none; }
   #Dashboard > .info-container > .cards-container {
     width: 100%;
     height: 100%;
@@ -83,13 +85,27 @@
     -ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 100%; }
+  #Dashboard > .info-container > .chart-container {
+    display: block;
+    width: 100%;
+    height: 300px;
+    margin-left: 5px;
+    margin-bottom: 3px; }
+  #Dashboard > .info-container > .chart-container > .card-chart {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-90deg, #E91E63, #bc4e9c);
+    box-shadow: 0 0 5px #b6b6b6;
+    color: #212121;
+    border-radius: 10px; }
   #Dashboard > .info-container > .cards-container {
     overflow-x: initial;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-left: 5px; }
+    margin-left: 5px;
+    max-height: 272px; }
   #Dashboard > .info-container > .cards-container > div {
     flex: 0 0 50%;
     max-width: 50%; }
@@ -97,7 +113,8 @@
     background-image: none;
     background-color: white;
     box-shadow: 0 0 5px #b6b6b6;
-    color: #212121; }
+    color: #212121;
+    border-radius: 10px; }
   #Dashboard > .task-container > .btn-filter > svg {
     width: 32px;
     height: 32px; } }

@@ -84,7 +84,7 @@
     color: #212121;
     border-radius: 10px; }
   #Sidenav > div > .active {
-    background-image: linear-gradient(-90deg, #E91E63, #bc4e9c);
+    background-image: linear-gradient(-90deg, #2F80ED, #56CCF2);
     color: white; }
   #Sidenav > div:last-child {
     position: absolute;

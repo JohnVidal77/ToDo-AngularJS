@@ -2,7 +2,7 @@
     window.__env = window.__env || {};
 
     // API url
-    window.__env.currentLogo = 'assets/logo/logo-pink.svg';
+    window.__env.currentLogo = 'assets/logo/logo-blue.svg';
 
     // API url
     window.__env.apiUrl = '';

@@ -1,0 +1,8 @@
+@import "../../style/colors";
+@import "../../style/fontSize";
+
+@mixin card() {
+  box-shadow: 0 0 5px $grey-light-color;
+  color: $text-color;
+  border-radius: 10px;
+}

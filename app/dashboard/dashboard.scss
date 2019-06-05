@@ -1,5 +1,6 @@
 @import "../style/colors";
 @import "../style/fontSize";
+@import '../style/components/cards';
 
 #Dashboard{
   display: -ms-flexbox;
@@ -13,6 +14,10 @@
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 10px;
+  }
+
+  >.info-container >.chart-container {
+    display: none;
   }
 
   >.info-container >.cards-container {
@@ -133,6 +138,21 @@
       max-width: 100%;
     }
 
+    >.info-container >.chart-container {
+      display: block;
+      width: 100%;
+      height: 300px;
+      margin-left: 5px;
+      margin-bottom: 3px;
+    }
+
+    >.info-container >.chart-container >.card-chart {
+      width: 100%;
+      height: 100%;
+      background-image: $gradient-pink;
+      @include card();
+    }
+
     >.info-container >.cards-container {
       overflow-x: initial;
       display: -ms-flexbox;
@@ -140,6 +160,7 @@
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       margin-left: 5px;
+      max-height: 272px;
     }
 
     >.info-container >.cards-container >div {
@@ -150,8 +171,7 @@
     >.info-container >.cards-container >div >.card-1, >.info-container >.cards-container >div >.card-2, >.info-container >.cards-container >div >.card-3, >.info-container >.cards-container >div >.card-4 {
       background-image: none;
       background-color: white;
-      box-shadow: 0 0 5px $grey-light-color;
-      color: $text-color;
+      @include card();
     }
 
     >.task-container >.btn-filter >svg {
