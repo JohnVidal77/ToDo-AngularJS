@@ -33,13 +33,13 @@
     color: white;
     height: 90px; }
   #Dashboard > .info-container > .cards-container > div > .card-1 {
-    background-image: linear-gradient(-90deg, #E91E63, #bc4e9c); }
-  #Dashboard > .info-container > .cards-container > div > .card-2 {
     background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
+  #Dashboard > .info-container > .cards-container > div > .card-2 {
+    background-image: linear-gradient(-90deg, #FF9800, #fc4a1a); }
   #Dashboard > .info-container > .cards-container > div > .card-3 {
     background-image: linear-gradient(-90deg, #E91E63, #bc4e9c); }
   #Dashboard > .info-container > .cards-container > div > .card-4 {
-    background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
+    background-image: linear-gradient(-90deg, #45B649, #DCE35B); }
   #Dashboard > .info-container > .cards-container > div > .cards > span {
     font-size: 2rem;
     font-weight: bold; }
@@ -94,9 +94,7 @@
   #Dashboard > .info-container > .chart-container > .card-chart {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(-90deg, #E91E63, #bc4e9c);
     box-shadow: 0 0 5px #b6b6b6;
-    color: #212121;
     border-radius: 10px; }
   #Dashboard > .info-container > .cards-container {
     overflow-x: initial;
@@ -105,15 +103,12 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-left: 5px;
-    max-height: 272px; }
+    max-height: 140px; }
   #Dashboard > .info-container > .cards-container > div {
-    flex: 0 0 50%;
-    max-width: 50%; }
+    flex: 0 0 25%;
+    max-width: 25%; }
   #Dashboard > .info-container > .cards-container > div > .card-1, #Dashboard > .info-container > .cards-container > div > .card-2, #Dashboard > .info-container > .cards-container > div > .card-3, #Dashboard > .info-container > .cards-container > div > .card-4 {
-    background-image: none;
-    background-color: white;
     box-shadow: 0 0 5px #b6b6b6;
-    color: #212121;
     border-radius: 10px; }
   #Dashboard > .task-container > .btn-filter > svg {
     width: 32px;
