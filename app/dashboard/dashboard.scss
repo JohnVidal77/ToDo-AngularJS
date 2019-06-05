@@ -22,7 +22,7 @@
 
   >.info-container >.cards-container {
     width: 100%;
-    height: 100%;
+    height: 136px;
     white-space: nowrap;
     overflow-y: hidden;
     overflow-style: auto;
@@ -50,11 +50,11 @@
   }
 
   >.info-container >.cards-container >div >.card-1 {
-    background-image: $gradient-blue;
+    background-image: $gradient-orange;
   }
 
   >.info-container >.cards-container >div >.card-2 {
-    background-image: $gradient-orange;
+    background-image: $gradient-blue;
   }
 
   >.info-container >.cards-container >div >.card-3 {
@@ -65,12 +65,14 @@
     background-image: $gradient-green;
   }
 
-  >.info-container >.cards-container >div >.cards >span{
+  >.info-container >.cards-container >div >.cards >i{
+    display: block;
     font-size: $big;
-    font-weight: bold;
+    margin: 10px 0;
   }
 
   >.info-container >.cards-container >div >.cards >p{
+    display: block;
     text-transform: uppercase;
     margin: 0;
   }
