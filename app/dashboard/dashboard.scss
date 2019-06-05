@@ -104,6 +104,11 @@
     margin-bottom: 20px;
   }
 
+  >.task-container >.list-days >li >h3{
+    margin: 0;
+
+  }
+
   >.task-container >.list-days >li >.list-task-day{
     list-style: none;
     font-weight: normal;
@@ -149,9 +154,53 @@
     }
 
     >.info-container >.chart-container >.card-chart {
-      width: 100%;
+      width: initial;
       height: 100%;
+      padding: 20px;
       @include card();
+    }
+
+    >.info-container >.chart-container >.card-chart >h3{
+      margin: 0;
+    }
+
+    >.info-container >.chart-container >.card-chart >.charts-container {
+      height: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+    }
+
+    >.info-container >.chart-container >.card-chart >.charts-container >div {
+      flex: 0 0 14.28%;
+      max-width: 14.28%;
+    }
+
+    >.info-container >.chart-container >.card-chart >.charts-container >div >h4{
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    >.info-container >.chart-container >.card-chart >.charts-container >div >.progress{
+      height: 200px;
+      width: 25px;
+      background-color: $grey-hyper-color;
+      border-radius: 25px;
+      margin: 0 auto;
+      display: grid;
+    }
+
+    >.info-container >.chart-container >.card-chart >.charts-container >div >.progress >.progress-bar{
+      align-self: end;
+      border-radius: 25px;
+      height: 25%;
+      float: left;
+      width: 100%;
+      position: relative;
+      background-color: $primary-color;
     }
 
     >.info-container >.cards-container {
@@ -161,12 +210,12 @@
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       margin-left: 5px;
-      max-height: 140px;
+      height: 280px;
     }
 
     >.info-container >.cards-container >div {
-      flex: 0 0 25%;
-      max-width: 25%;
+      flex: 0 0 50%;
+      max-width: 50%;
     }
 
     >.info-container >.cards-container >div >.card-1, >.info-container >.cards-container >div >.card-2, >.info-container >.cards-container >div >.card-3, >.info-container >.cards-container >div >.card-4 {

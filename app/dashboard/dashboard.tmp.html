@@ -30,7 +30,51 @@
         </div>
         <div class="chart-container">
             <div class="card-chart">
-
+                <h3>Weekly Progress</h3>
+                <div class="charts-container">
+                    <div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <h4>m</h4>
+                    </div>
+                    <div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <h4>t</h4>
+                    </div>
+                    <div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <h4>w</h4>
+                    </div>
+                    <div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <h4>t</h4>
+                    </div>
+                    <div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <h4>f</h4>
+                    </div>
+                    <div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <h4>s</h4>
+                    </div>
+                    <div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <h4>s</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -42,19 +86,19 @@
         </div>
         <ul class="list-days">
             <li ng-if="vm.tasks.today.length">
-                Today
+                <h3>Today</h3>
                 <ul ng-repeat="task in vm.tasks.today" class="list-task-day">
                     <li><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
                 </ul>
             </li>
             <li ng-if="vm.tasks.tomorrow.length">
-                Tomorrow
+                <h3>Tomorrow</h3>
                 <ul ng-repeat="task in vm.tasks.tomorrow" class="list-task-day">
                     <li><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
                 </ul>
             </li>
             <li ng-if="vm.tasks.month.length">
-                Month
+                <h3>Month</h3>
                 <ul ng-repeat="task in vm.tasks.month" class="list-task-day">
                     <li><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
                 </ul>
