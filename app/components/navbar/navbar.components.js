@@ -16,6 +16,7 @@
         console.log(window.__env);
 
         vm.onClick_ChangeRoute = () => serviceRoute.changeRoute(sessionStorage.getItem('last-state'));
+        vm.onClick_Logout = onClick_Logout;
         vm.openSide = openSide;
         vm.openNotification = openNotification;
         vm.closeSide = closeSide;
@@ -23,6 +24,11 @@
         vm.showOverlay = showOverlay;
         vm.hideOverlay = hideOverlay;
         vm.closeAllOverlay = closeAllOverlay;
+
+        function onClick_Logout() {
+            $state.go('login');
+            localStorage.clear()
+        }
 
         function openSide() {
             document.getElementById("Sidenav").style.left = "0";
