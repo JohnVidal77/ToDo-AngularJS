@@ -19,6 +19,12 @@
                     templateUrl: "components/navbar/navbar.html",
                     controller: 'NavbarController',
                     controllerAs: 'vm'
+                },
+
+                'actionMenu@dashboard': {
+                    templateUrl: "components/action-menu/action-menu.html",
+                    controller: 'ActionMenuController',
+                    controllerAs: 'vm'
                 }
             }
         })

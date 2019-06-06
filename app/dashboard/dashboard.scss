@@ -2,6 +2,14 @@
 @import "../style/fontSize";
 @import '../style/components/cards';
 
+@mixin menuButton() {
+  border-radius: 5px;
+  padding: 5px 20px;
+  background-color: $grey-light-color;
+  color: white;
+  cursor: pointer;
+}
+
 #Dashboard{
   display: -ms-flexbox;
   display: flex;
@@ -77,20 +85,27 @@
     margin: 0;
   }
 
-  >.task-container >.btn-filter {
+  >.task-container >.menu-action {
     text-align: right;
   }
 
-  >.task-container >.btn-filter >svg {
+  >.task-container >.menu-action >.btn-add{
+    display: none;
+  }
+
+  >.task-container >.menu-action >.btn-filter {
+    display: inline-block;
+  }
+
+  >.task-container >.menu-action >.btn-filter >i{
+    display: none;
+  }
+
+  >.task-container >div >.btn-filter >svg {
     width:24px;
     height:24px;
     text-align: right;
     padding-right: 20px;
-
-    &:hover{
-      opacity: 0.8;
-      cursor: pointer;
-    }
   }
 
   >.task-container >.list-days {
@@ -222,9 +237,41 @@
       @include card();
     }
 
-    >.task-container >.btn-filter >svg {
-      width: 32px;
-      height: 32px;
+    >.task-container >.menu-action {
+      padding: 20px;
+    }
+
+    >.task-container >.menu-action >.btn-add{
+      display: inline-block;
+    }
+
+    >.task-container >.menu-action >.btn-filter{
+      display: inline-block;
+    }
+
+    >.task-container >.menu-action >.btn-add >i{
+      transition: 0.3s;
+      @include menuButton();
+
+      &:hover{
+        background-image: $gradient-orange;
+        box-shadow: 0 0 5px $grey-light-color;
+      }
+    }
+
+    >.task-container >.menu-action >.btn-filter >i{
+      transition: 0.3s;
+      @include menuButton();
+      display: block;
+
+      &:hover{
+        background-image: $gradient-blue;
+        box-shadow: 0 0 5px $grey-light-color;
+      }
+    }
+
+    >.task-container >div >.btn-filter >svg {
+      display: none;
     }
   }
 }

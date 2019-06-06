@@ -48,16 +48,19 @@
     display: block;
     text-transform: uppercase;
     margin: 0; }
-  #Dashboard > .task-container > .btn-filter {
+  #Dashboard > .task-container > .menu-action {
     text-align: right; }
-  #Dashboard > .task-container > .btn-filter > svg {
+  #Dashboard > .task-container > .menu-action > .btn-add {
+    display: none; }
+  #Dashboard > .task-container > .menu-action > .btn-filter {
+    display: inline-block; }
+  #Dashboard > .task-container > .menu-action > .btn-filter > i {
+    display: none; }
+  #Dashboard > .task-container > div > .btn-filter > svg {
     width: 24px;
     height: 24px;
     text-align: right;
     padding-right: 20px; }
-    #Dashboard > .task-container > .btn-filter > svg:hover {
-      opacity: 0.8;
-      cursor: pointer; }
   #Dashboard > .task-container > .list-days {
     font-size: 1rem;
     list-style: none;
@@ -146,6 +149,32 @@
   #Dashboard > .info-container > .cards-container > div > .card-1, #Dashboard > .info-container > .cards-container > div > .card-2, #Dashboard > .info-container > .cards-container > div > .card-3, #Dashboard > .info-container > .cards-container > div > .card-4 {
     box-shadow: 0 0 5px #b6b6b6;
     border-radius: 10px; }
-  #Dashboard > .task-container > .btn-filter > svg {
-    width: 32px;
-    height: 32px; } }
+  #Dashboard > .task-container > .menu-action {
+    padding: 20px; }
+  #Dashboard > .task-container > .menu-action > .btn-add {
+    display: inline-block; }
+  #Dashboard > .task-container > .menu-action > .btn-filter {
+    display: inline-block; }
+  #Dashboard > .task-container > .menu-action > .btn-add > i {
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: #b6b6b6;
+    color: white;
+    cursor: pointer; }
+    #Dashboard > .task-container > .menu-action > .btn-add > i:hover {
+      background-image: linear-gradient(-90deg, #FF9800, #fc4a1a);
+      box-shadow: 0 0 5px #b6b6b6; }
+  #Dashboard > .task-container > .menu-action > .btn-filter > i {
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: #b6b6b6;
+    color: white;
+    cursor: pointer;
+    display: block; }
+    #Dashboard > .task-container > .menu-action > .btn-filter > i:hover {
+      background-image: linear-gradient(-90deg, #2F80ED, #56CCF2);
+      box-shadow: 0 0 5px #b6b6b6; }
+  #Dashboard > .task-container > div > .btn-filter > svg {
+    display: none; } }

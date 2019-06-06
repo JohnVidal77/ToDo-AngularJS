@@ -1,5 +1,7 @@
 <ui-view name="navbar"></ui-view>
 
+<ui-view name="actionMenu"></ui-view>
+
 <div id="Dashboard">
     <div class="info-container">
         <div class="cards-container">
@@ -79,10 +81,16 @@
         </div>
     </div>
     <div class="task-container">
-        <div class="btn-filter">
-            <svg viewBox="0 0 24 24">
-                <path fill="#000000" d="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z" />
-            </svg>
+        <div class="menu-action">
+            <div class="btn-add">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="btn-filter">
+                <i class="fas fa-filter"></i>
+                <svg viewBox="0 0 24 24">
+                    <path fill="#000000" d="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z" />
+                </svg>
+            </div>
         </div>
         <ul class="list-days">
             <li ng-if="vm.tasks.today.length">

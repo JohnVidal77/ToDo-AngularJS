@@ -13,6 +13,7 @@
 
         //Components
         'app.navbarModal',
-        'app.navbar'
+        'app.navbar',
+        'app.actionMenu'
     ]);
 })();

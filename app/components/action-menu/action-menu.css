@@ -1,0 +1,16 @@
+#ActionMenu {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  background-image: linear-gradient(-90deg, #FF9800, #fc4a1a);
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+  line-height: 52px;
+  box-shadow: 0 3px 5px #b6b6b6; }
+
+@media screen and (min-width: 768px) {
+  #ActionMenu {
+    display: none; } }
