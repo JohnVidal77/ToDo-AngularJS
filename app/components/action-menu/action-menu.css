@@ -1,7 +1,7 @@
 #ActionMenu {
   transition: .3s;
   z-index: 3;
-  position: fixed;
+  position: absolute;
   bottom: 32px;
   right: 32px;
   width: 52px;
@@ -16,7 +16,7 @@
 #BtnCreateTask {
   transition: .3s;
   z-index: 2;
-  position: fixed;
+  position: absolute;
   bottom: 32px;
   right: 38px;
   width: 40px;
@@ -27,11 +27,19 @@
   line-height: 40px;
   box-shadow: 0 3px 5px #b6b6b6;
   background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
+  #BtnCreateTask > span {
+    transition: .1s;
+    border-radius: 8px;
+    width: 0;
+    background-color: #212121;
+    font-size: 0.75rem;
+    position: absolute;
+    right: 60px; }
 
 #BtnCreateGoal {
   transition: .3s;
   z-index: 2;
-  position: fixed;
+  position: absolute;
   bottom: 32px;
   right: 38px;
   width: 40px;
@@ -42,6 +50,14 @@
   line-height: 40px;
   box-shadow: 0 3px 5px #b6b6b6;
   background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
+  #BtnCreateGoal > span {
+    transition: .1s;
+    border-radius: 8px;
+    width: 0;
+    background-color: #212121;
+    font-size: 0.75rem;
+    position: absolute;
+    right: 60px; }
 
 @media screen and (min-width: 768px) {
   #ActionMenu {

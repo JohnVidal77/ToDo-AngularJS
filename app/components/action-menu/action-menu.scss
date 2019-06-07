@@ -3,7 +3,7 @@
 
 @mixin menuButton($sizeBall, $zindex, $right) {
   z-index: $zindex;
-  position: fixed;
+  position: absolute;
   bottom: 32px;
   right: $right;
   width: $sizeBall;
@@ -13,6 +13,18 @@
   color: white;
   line-height: $sizeBall;
   box-shadow: 0 3px 5px $grey-light-color;
+}
+
+@mixin tooltip() {
+  transition: .1s;
+  border-radius: 8px;
+  width: 0;
+  background-color: $text-color;
+  //padding: 2px;
+  font-size: $small;
+  position: absolute;
+  //bottom: 37px;
+  right: 60px;
 }
 
 #ActionMenu{
@@ -25,12 +37,20 @@
   transition: .3s;
   @include menuButton(40px, 2, 38px);
   background-image: $gradient-blue;
+
+  >span{
+    @include tooltip()
+  }
 }
 
 #BtnCreateGoal{
   transition: .3s;
   @include menuButton(40px, 2, 38px);
   background-image: $gradient-blue;
+
+  >span{
+    @include tooltip()
+  }
 }
 
 @media screen and (min-width: 768px) {
