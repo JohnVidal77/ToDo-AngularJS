@@ -29,6 +29,7 @@
   background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
   #BtnCreateTask > span {
     transition: .1s;
+    opacity: 0.8;
     border-radius: 8px;
     width: 0;
     background-color: #212121;
@@ -52,6 +53,7 @@
   background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
   #BtnCreateGoal > span {
     transition: .1s;
+    opacity: 0.8;
     border-radius: 8px;
     width: 0;
     background-color: #212121;
@@ -60,5 +62,5 @@
     right: 60px; }
 
 @media screen and (min-width: 768px) {
-  #ActionMenu {
+  #ActionMenu, #BtnCreateGoal, #BtnCreateTask {
     display: none; } }
