@@ -18,8 +18,25 @@
                  {name: 'task 2', completed: true},
                  {name: 'task 3', completed: false}
              ],
-             tomorrow: [],
-             month: []
+             tomorrow: [
+                 {name: 'task 1', completed: false},
+                 {name: 'task 2', completed: true},
+                 {name: 'task 3', completed: false},
+                 {name: 'task 2', completed: true},
+                 {name: 'task 2', completed: true},
+                 {name: 'task 2', completed: true},
+                 {name: 'task 2', completed: true},
+             ],
+             month: [
+                 {name: 'task 1', completed: false},
+                 {name: 'task 2', completed: true},
+                 {name: 'task 3', completed: false},
+                 {name: 'task 2', completed: true},
+                 {name: 'task 2', completed: true},
+                 {name: 'task 2', completed: true},
+                 {name: 'task 2', completed: true},
+                 {name: 'task 2', completed: true},
+             ]
          }
 
          vm.tasks = tasks

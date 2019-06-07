@@ -8,6 +8,8 @@
   display: flex;
   min-height: 50px;
   text-align: center;
+  background-color: white;
+  z-index: 1;
 
   >div{
     flex: 0 0 33.33%;

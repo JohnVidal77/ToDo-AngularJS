@@ -4,7 +4,9 @@
   width: 100%;
   display: flex;
   min-height: 50px;
-  text-align: center; }
+  text-align: center;
+  background-color: white;
+  z-index: 1; }
   #Navbar > div {
     flex: 0 0 33.33%;
     max-width: 33.33%;

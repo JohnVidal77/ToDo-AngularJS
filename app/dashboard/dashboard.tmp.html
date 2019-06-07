@@ -95,20 +95,20 @@
         <ul class="list-days">
             <li ng-if="vm.tasks.today.length">
                 <h3>Today</h3>
-                <ul ng-repeat="task in vm.tasks.today" class="list-task-day">
-                    <li><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
+                <ul class="list-task-day">
+                    <li ng-repeat="task in vm.tasks.today"><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
                 </ul>
             </li>
             <li ng-if="vm.tasks.tomorrow.length">
                 <h3>Tomorrow</h3>
-                <ul ng-repeat="task in vm.tasks.tomorrow" class="list-task-day">
-                    <li><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
+                <ul class="list-task-day">
+                    <li ng-repeat="task in vm.tasks.tomorrow"><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
                 </ul>
             </li>
             <li ng-if="vm.tasks.month.length">
                 <h3>Month</h3>
-                <ul ng-repeat="task in vm.tasks.month" class="list-task-day">
-                    <li><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
+                <ul class="list-task-day">
+                    <li ng-repeat="task in vm.tasks.month"><p ng-class="task.completed ? 'task-complete' : null">{{task.name}}</p></li>
                 </ul>
             </li>
         </ul>

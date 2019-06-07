@@ -120,8 +120,10 @@
   }
 
   >.task-container >.list-days >li >h3{
+    background-color: white;
+    position: sticky;
+    top: 58px;
     margin: 0;
-
   }
 
   >.task-container >.list-days >li >.list-task-day{
@@ -237,8 +239,17 @@
       @include card();
     }
 
+    >.task-container >.list-days{
+      overflow-y: auto;
+      max-height: 580px;
+    }
+
+    >.task-container >.list-days >li >h3{
+      top: 0;
+    }
+
     >.task-container >.menu-action {
-      padding: 20px;
+      padding: 0 20px;
     }
 
     >.task-container >.menu-action >.btn-add{

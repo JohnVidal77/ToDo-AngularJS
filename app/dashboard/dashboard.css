@@ -69,6 +69,9 @@
   #Dashboard > .task-container > .list-days > li {
     margin-bottom: 20px; }
   #Dashboard > .task-container > .list-days > li > h3 {
+    background-color: white;
+    position: sticky;
+    top: 58px;
     margin: 0; }
   #Dashboard > .task-container > .list-days > li > .list-task-day {
     list-style: none;
@@ -149,8 +152,13 @@
   #Dashboard > .info-container > .cards-container > div > .card-1, #Dashboard > .info-container > .cards-container > div > .card-2, #Dashboard > .info-container > .cards-container > div > .card-3, #Dashboard > .info-container > .cards-container > div > .card-4 {
     box-shadow: 0 0 5px #b6b6b6;
     border-radius: 10px; }
+  #Dashboard > .task-container > .list-days {
+    overflow-y: auto;
+    max-height: 580px; }
+  #Dashboard > .task-container > .list-days > li > h3 {
+    top: 0; }
   #Dashboard > .task-container > .menu-action {
-    padding: 20px; }
+    padding: 0 20px; }
   #Dashboard > .task-container > .menu-action > .btn-add {
     display: inline-block; }
   #Dashboard > .task-container > .menu-action > .btn-filter {
