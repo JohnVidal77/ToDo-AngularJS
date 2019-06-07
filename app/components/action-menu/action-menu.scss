@@ -1,18 +1,36 @@
 @import "../../style/colors";
 @import "../../style/fontSize";
 
-#ActionMenu{
+@mixin menuButton($sizeBall, $zindex, $right) {
+  z-index: $zindex;
   position: fixed;
   bottom: 32px;
-  right: 32px;
-  width: 52px;
-  height: 52px;
-  background-image: $gradient-orange;
+  right: $right;
+  width: $sizeBall;
+  height: $sizeBall;
   border-radius: 25px;
   text-align: center;
   color: white;
-  line-height: 52px;
+  line-height: $sizeBall;
   box-shadow: 0 3px 5px $grey-light-color;
+}
+
+#ActionMenu{
+  transition: .3s;
+  @include menuButton(52px, 3, 32px);
+  background-image: $gradient-orange;
+}
+
+#BtnCreateTask{
+  transition: .3s;
+  @include menuButton(40px, 2, 38px);
+  background-image: $gradient-blue;
+}
+
+#BtnCreateGoal{
+  transition: .3s;
+  @include menuButton(40px, 2, 38px);
+  background-image: $gradient-blue;
 }
 
 @media screen and (min-width: 768px) {
