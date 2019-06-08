@@ -2,6 +2,8 @@
 
 <ui-view name="actionMenu"></ui-view>
 
+<ui-view name="modal"></ui-view>
+
 <div id="Dashboard">
     <div class="info-container">
         <div class="cards-container">
@@ -82,10 +84,10 @@
     </div>
     <div class="task-container">
         <div class="menu-action">
-            <div class="btn-add">
+            <div class="btn-add" ng-click="vm.onClick_openModal('create-container')">
                 <i class="fas fa-plus"></i>
             </div>
-            <div class="btn-filter">
+            <div class="btn-filter" ng-click="vm.onClick_openModal('filter-container')">
                 <i class="fas fa-filter"></i>
                 <svg viewBox="0 0 24 24">
                     <path fill="#000000" d="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z" />

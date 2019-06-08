@@ -25,6 +25,12 @@
                     templateUrl: "components/action-menu/action-menu.html",
                     controller: 'ActionMenuController',
                     controllerAs: 'vm'
+                },
+
+                'modal@dashboard': {
+                    templateUrl: "components/modal/modal.html",
+                    controller: 'ModalController',
+                    controllerAs: 'vm'
                 }
             }
         })

@@ -1,0 +1,65 @@
+<div id="Modal">
+    <div class="modal">
+        <div class="modal-header">
+            <i class="fas fa-times" ng-click="vm.onClick_closeModal()"></i>
+
+            <div id="Switch-forms">
+                <span ng-class="!vm.goalView ? 'switch-actived' : 'switch-deactived'">Create Task</span>
+                <i ng-class="!vm.goalView ? 'switch-actived' : 'switch-deactived'" class="fas fa-tasks"></i>
+
+                <label class="switch">
+                    <input type="checkbox" ng-model="vm.goalView" ng-change="vm.onClick_changeView()" id="viewChanger" checked>
+                    <span class="slider round"></span>
+                </label>
+
+                <i ng-class="vm.goalView ? 'switch-actived' : 'switch-deactived'" class="fas fa-bullseye"></i>
+                <span ng-class="vm.goalView ? 'switch-actived' : 'switch-deactived'">Create Goal</span>
+            </div>
+        </div>
+        <div class="filter-container">
+            <h3>Filters</h3>
+            <form action="" name="FilterForm">
+                <label class="container-radio">Today
+                    <input type="radio" name="radio" checked>
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container-radio">Tomorrow
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container-radio">Month
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container-radio">Other Day
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+        </div>
+        <div class="create-container">
+            <h3>Create Task</h3>
+            <form name="TaskForm">
+                <div class="input-container">
+                    <input type="text" placeholder="Task Name">
+                </div>
+                <div class="input-container">
+                    <input type="text" placeholder="Tags">
+                </div>
+                <div class="input-container">
+                    <input type="text" placeholder="When?">
+                </div>
+                <button>Create Task</button>
+            </form>
+        </div>
+        <div class="goal-container">
+            <h3>Create Goal</h3>
+            <i class="fas fa-stopwatch"></i>
+            <span>This featured will be added soon </span>
+        </div>
+    </div>
+    <div class="overlay"></div>
+</div>

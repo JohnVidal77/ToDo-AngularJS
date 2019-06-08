@@ -14,6 +14,7 @@
         //Components
         'app.navbarModal',
         'app.navbar',
-        'app.actionMenu'
+        'app.actionMenu',
+        'app.modal'
     ]);
 })();
