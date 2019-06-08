@@ -59,6 +59,10 @@
     text-align: center;
   }
 
+  >div >.register-container >.erro-msg{
+    color: $error-color;
+  }
+
   >div >.register-container >button{
     color: white;
     background-image: $gradient-blue;

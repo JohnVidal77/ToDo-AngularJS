@@ -6,15 +6,14 @@
             <img ng-src="{{vm.logoUrl}}" alt="">
         </div>
 
-        <form action="" class="register-container" name="registerForm">
-            <p>
-                Enter your email so we can send you a new password.
-            </p>
+        <form ng-submit="vm.onClick_createUser()" class="register-container" name="registerForm" novalidate>
+            <p ng-if="vm.formValid">Create a new user!</p>
+            <p ng-if="!vm.formValid" class="erro-msg">Form is not valid! Fill in the information correctly</p>
 
             <div class="input-container">
                 <i ng-if="registerForm.nameRegister.$touched && registerForm.nameRegister.$invalid" class="icon-error fas fa-exclamation-triangle"></i>
                 <i ng-if="registerForm.nameRegister.$touched && registerForm.nameRegister.$valid" class="icon-success fas fa-check"></i>
-                <input type="text" name="nameRegister" placeholder="Nome" ng-model="vm.nameRegister" required>
+                <input type="text" name="nameRegister" placeholder="Name" ng-model="vm.nameRegister" required>
             </div>
 
             <div class="input-container">
@@ -26,7 +25,7 @@
             <div class="input-container">
                 <i ng-if="registerForm.passwordRegister.$touched && registerForm.passwordRegister.$invalid" class="icon-error fas fa-exclamation-triangle"></i>
                 <i ng-if="registerForm.passwordRegister.$touched && registerForm.passwordRegister.$valid" class="icon-success fas fa-check"></i>
-                <input type="password" name="passwordRegister" placeholder="Email" ng-model="vm.passwordRegister" required>
+                <input type="password" name="passwordRegister" placeholder="Password" ng-model="vm.passwordRegister" required>
             </div>
 
             <button type="submit">Cadastrar</button>

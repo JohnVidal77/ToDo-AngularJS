@@ -37,6 +37,8 @@
     max-width: 250px; }
   #Register-Form > div > .register-container > p {
     text-align: center; }
+  #Register-Form > div > .register-container > .erro-msg {
+    color: #d50000; }
   #Register-Form > div > .register-container > button {
     color: white;
     background-image: linear-gradient(-90deg, #2F80ED, #56CCF2); }
