@@ -45,15 +45,19 @@
                 return console.log('Missing Password')
             }
 
-            firebase.auth().createUserWithEmailAndPassword(userInfo.email, userInfo.password).catch(function(error) {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                vm.loading.style.display = 'none';
+            firebase.auth().createUserWithEmailAndPassword(userInfo.email, userInfo.password)
+                .then(cred => {
+                    vm.loading.style.display = 'none';
+                    console.log(cred);
+                })
+                .catch(error => {
+                    vm.loading.style.display = 'none';
 
-                return console.log(errorCode + errorMessage)
-            });
-
-            vm.loading.style.display = 'none';
+                    if(error.code === 'auth/email-already-in-use') {
+                        //TODO: Add toaster error
+                        console.log('Email já está em uso')
+                    }
+                });
         }
      }
  })();
