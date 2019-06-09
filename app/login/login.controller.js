@@ -19,6 +19,7 @@
          vm.onClick_ChangeRoute = serviceRoute.changeRoute;
 
          function onClick_login() {
+             vm.loading.style.display = 'flex';
              if(!vm.emailLogin && !vm.passwordLogin){
                  return alert('Insira os dados')
              }
