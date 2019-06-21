@@ -26,8 +26,12 @@
         vm.closeAllOverlay = closeAllOverlay;
 
         function onClick_Logout() {
-            $state.go('login');
-            localStorage.clear()
+            firebase.auth().signOut().then(function() {
+                $state.go('login');
+                localStorage.clear()
+            }).catch(function(error) {
+                console.log(error)
+            });
         }
 
         function openSide() {
