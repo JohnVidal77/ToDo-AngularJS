@@ -20,9 +20,12 @@ html, body{
   overflow-x: hidden;
 }
 
+.toast-top-full-width{
+  margin-top: 10px;
+}
+
 @media screen and (min-width: 768px) {
   html, body{
     overflow-y: hidden;
   }
-
 }

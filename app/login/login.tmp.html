@@ -5,12 +5,12 @@
         </div>
         <form class="login-container" name="login" ng-submit="vm.onClick_login()" novalidate>
             <div class="input-container">
-                <i ng-if="login.emailLogin.$touched && login.emailLogin.$invalid" class="icon-error fas fa-exclamation-triangle"></i>
+                <i ng-if="login.emailLogin.$touched && login.emailLogin.$invalid" class="icon-error fas fa-exclamation-circle"></i>
                 <input type="email" name="emailLogin" placeholder="Email" ng-model="vm.emailLogin" required>
             </div>
 
             <div class="input-container">
-                <i ng-if="login.passwordLogin.$touched && login.passwordLogin.$invalid" class="icon-error fas fa-exclamation-triangle"></i>
+                <i ng-if="login.passwordLogin.$touched && login.passwordLogin.$invalid" class="icon-error fas fa-exclamation-circle"></i>
                 <input type="password" name="passwordLogin" placeholder="Password" ng-model="vm.passwordLogin" minlength="6" required>
             </div>
 

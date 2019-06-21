@@ -5,11 +5,11 @@
          .module('app.login')
          .controller('LoginController', LoginController);
          
-     LoginController.$inject = ['serviceRoute'];
+     LoginController.$inject = ['serviceRoute', 'toastr'];
      
      /* @ngInject */
      
-     function LoginController(serviceRoute){
+     function LoginController(serviceRoute, toastr){
          const vm = this;
 
          vm.logoUrl = window.__env.currentLogo;
@@ -20,8 +20,10 @@
 
          function onClick_login() {
              vm.loading.style.display = 'flex';
+
              if(!vm.emailLogin && !vm.passwordLogin){
-                 return alert('Insira os dados')
+                 vm.loading.style.display = 'none';
+                 return toastr.error('Enter your credentials', 'Error');
              }
 
              firebase.auth().signInWithEmailAndPassword(vm.emailLogin, vm.passwordLogin)
@@ -36,10 +38,12 @@
                      let errorCode = error.code;
 
                      if(errorCode === 'auth/wrong-password') {
+                         toastr.error('Wrong Password', 'Error');
                          //senha errada
                      }
 
                      if(errorCode === 'auth/user-not-found') {
+                         toastr.error('User not found', 'Error');
                          //user not found
                      }
                  });
