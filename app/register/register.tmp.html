@@ -8,7 +8,7 @@
 
         <form ng-submit="vm.onClick_createUser()" class="register-container" name="registerForm" novalidate>
             <p ng-if="vm.formValid">Create a new user!</p>
-            <p ng-if="!vm.formValid" class="erro-msg">Form is not valid! Fill in the information correctly</p>
+            <p ng-if="!vm.formValid" class="erro-msg">Form is not valid! Fill out the form correctly</p>
 
             <div class="input-container">
                 <i ng-if="registerForm.nameRegister.$touched && registerForm.nameRegister.$invalid" class="icon-error fas fa-exclamation-circle"></i>

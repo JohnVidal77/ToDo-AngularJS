@@ -5,11 +5,11 @@
          .module('app.register')
          .controller('RegisterController', RegisterController);
          
-     RegisterController.$inject = [];
+     RegisterController.$inject = ['toastr'];
      
      /* @ngInject */
      
-     function RegisterController(){
+     function RegisterController(toastr){
          const vm = this;
 
          vm.logoUrl = window.__env.currentLogo;
@@ -30,19 +30,19 @@
             if(!userInfo.name) {
                 vm.formValid = false;
                 vm.loading.style.display = 'none';
-                return console.log('Missing Name')
+                return toastr.error('Missing Name', 'Error');
             }
 
             if(!userInfo.email) {
                 vm.formValid = false;
                 vm.loading.style.display = 'none';
-                return console.log('Missing Email')
+                return toastr.error('Missing Email', 'Error');
             }
 
-            if(!userInfo.email) {
+            if(!userInfo.password) {
                 vm.formValid = false;
                 vm.loading.style.display = 'none';
-                return console.log('Missing Password')
+                return toastr.error('Missing Password', 'Error');
             }
 
             firebase.auth().createUserWithEmailAndPassword(userInfo.email, userInfo.password)
@@ -54,8 +54,7 @@
                     vm.loading.style.display = 'none';
 
                     if(error.code === 'auth/email-already-in-use') {
-                        //TODO: Add toaster error
-                        console.log('Email já está em uso')
+                        toastr.error('Email already in use', 'Error');
                     }
                 });
         }
