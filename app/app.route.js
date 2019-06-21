@@ -11,10 +11,10 @@
         angular.extend(toastrConfig, {
             autoDismiss: false,
             containerId: 'toast-container',
-            maxOpened: 3,
+            maxOpened: 2,
             newestOnTop: true,
             positionClass: 'toast-top-full-width',
-            preventDuplicates: true,
+            preventDuplicates: false,
             preventOpenDuplicates: false,
             target: 'body'
         });
