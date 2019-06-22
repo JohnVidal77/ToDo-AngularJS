@@ -113,6 +113,18 @@
     list-style: none;
     font-weight: bold;
     padding-left: 30px;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $gradient-blue;
+      border-radius: 10px;
+    }
   }
 
   >.task-container >.list-days >li {
@@ -241,7 +253,7 @@
 
     >.task-container >.list-days{
       overflow-y: auto;
-      max-height: 580px;
+      max-height: 480px;
     }
 
     >.task-container >.list-days >li >h3{
@@ -285,4 +297,13 @@
       display: none;
     }
   }
+}
+
+@media screen and (min-width: 1290px) {
+  #Dashboard{
+    >.task-container >.list-days{
+      max-height: 580px;
+    }
+  }
+
 }

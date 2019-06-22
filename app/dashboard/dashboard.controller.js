@@ -35,7 +35,7 @@
                  {name: 'task 2', completed: true},
                  {name: 'task 2', completed: true},
                  {name: 'task 2', completed: true},
-                 {name: 'task 2', completed: true},
+                 {name: 'final task', completed: true},
              ]
          }
 
