@@ -91,12 +91,8 @@
 
 @media screen and (min-width: 768px) {
   #Dashboard > div {
-    flex-basis: 0;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    max-width: 100%; }
+    display: block; }
   #Dashboard > .info-container > .chart-container {
-    display: block;
     width: 100%;
     height: 300px;
     margin-left: 5px;
@@ -143,12 +139,10 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-left: 5px;
-    height: 280px; }
+    flex-wrap: wrap; }
   #Dashboard > .info-container > .cards-container > div {
-    flex: 0 0 50%;
-    max-width: 50%; }
+    flex: 0 0 25%;
+    max-width: 25%; }
   #Dashboard > .info-container > .cards-container > div > .card-1, #Dashboard > .info-container > .cards-container > div > .card-2, #Dashboard > .info-container > .cards-container > div > .card-3, #Dashboard > .info-container > .cards-container > div > .card-4 {
     box-shadow: 0 0 5px #b6b6b6;
     border-radius: 10px; }

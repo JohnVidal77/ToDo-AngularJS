@@ -156,14 +156,15 @@
 @media screen and (min-width: 768px) {
   #Dashboard{
     >div {
-      flex-basis: 0;
-      -ms-flex-positive: 1;
-      flex-grow: 1;
-      max-width: 100%;
+      //flex-basis: 0;
+      //-ms-flex-positive: 1;
+      //flex-grow: 1;
+      //max-width: 100%;
+      display: block;
     }
 
     >.info-container >.chart-container {
-      display: block;
+      //display: block TODO: check it later CSS
       width: 100%;
       height: 300px;
       margin-left: 5px;
@@ -226,13 +227,12 @@
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      margin-left: 5px;
-      height: 280px;
+      //height: 280px;
     }
 
     >.info-container >.cards-container >div {
-      flex: 0 0 50%;
-      max-width: 50%;
+      flex: 0 0 25%;
+      max-width: 25%;
     }
 
     >.info-container >.cards-container >div >.card-1, >.info-container >.cards-container >div >.card-2, >.info-container >.cards-container >div >.card-3, >.info-container >.cards-container >div >.card-4 {

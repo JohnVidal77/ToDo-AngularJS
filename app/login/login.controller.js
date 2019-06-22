@@ -31,7 +31,8 @@
                      vm.loading.style.display = 'none';
                      serviceRoute.changeRoute('dashboard');
 
-                     localStorage.setItem('user-cred', cred);
+                     console.log(cred);
+                     localStorage.setItem('user-cred', JSON.stringify(cred));
                  })
                  .catch(function(error) {
                      vm.loading.style.display = 'none';
