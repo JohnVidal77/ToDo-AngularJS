@@ -153,7 +153,7 @@
     border-radius: 10px; }
   #Dashboard > .task-container > .list-days {
     overflow-y: auto;
-    max-height: 480px; }
+    max-height: 65vh; }
   #Dashboard > .task-container > .list-days > li > h3 {
     top: 0; }
   #Dashboard > .task-container > .menu-action {
@@ -188,4 +188,4 @@
 
 @media screen and (min-width: 1290px) {
   #Dashboard > .task-container > .list-days {
-    max-height: 580px; } }
+    max-height: 65vh; } }
