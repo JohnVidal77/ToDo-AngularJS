@@ -13,8 +13,10 @@
         const vm = this;
 
         vm.currentState = $state.current.url;
+        vm.useInfo = undefined;
         console.log(window.__env);
 
+        vm.oninit = oninit;
         vm.onClick_ChangeRoute = () => serviceRoute.changeRoute(sessionStorage.getItem('last-state'));
         vm.onClick_Logout = onClick_Logout;
         vm.openSide = openSide;
@@ -24,6 +26,12 @@
         vm.showOverlay = showOverlay;
         vm.hideOverlay = hideOverlay;
         vm.closeAllOverlay = closeAllOverlay;
+
+        vm.oninit();
+
+        function oninit() {
+            vm.useInfo = JSON.parse(localStorage.getItem('user-info'));
+        }
 
         function onClick_Logout() {
             firebase.auth().signOut().then(function() {

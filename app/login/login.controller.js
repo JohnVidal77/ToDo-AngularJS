@@ -11,12 +11,15 @@
      
      function LoginController(serviceRoute, toastr){
          const vm = this;
+         const auth = firebase.auth();
+         const db = firebase.firestore();
 
          vm.logoUrl = window.__env.currentLogo;
          vm.loading = document.getElementById('Loading');
 
          vm.onClick_login = onClick_login;
          vm.onClick_ChangeRoute = serviceRoute.changeRoute;
+         vm.onCall_getUserInfo = onCall_getUserInfo;
 
          function onClick_login() {
              vm.loading.style.display = 'flex';
@@ -26,12 +29,10 @@
                  return toastr.error('Enter your credentials', 'Error');
              }
 
-             firebase.auth().signInWithEmailAndPassword(vm.emailLogin, vm.passwordLogin)
+             auth.signInWithEmailAndPassword(vm.emailLogin, vm.passwordLogin)
                  .then(cred => {
-                     vm.loading.style.display = 'none';
-                     serviceRoute.changeRoute('dashboard');
-
-                     console.log(cred);
+                     vm.onCall_getUserInfo(cred.user.uid);
+                     // console.log(cred);
                      localStorage.setItem('user-cred', JSON.stringify(cred));
                  })
                  .catch(function(error) {
@@ -47,6 +48,24 @@
                          toastr.error('User not found', 'Error');
                          //user not found
                      }
+                 });
+         }
+
+         function onCall_getUserInfo(userId) {
+             let docRef = db.collection("users");
+
+             docRef.where("uid", "==", userId)
+                 .get()
+                 .then(function(querySnapshot) {
+                     querySnapshot.forEach(function(doc) {
+                         vm.loading.style.display = 'none';
+                         serviceRoute.changeRoute('dashboard');
+
+                         localStorage.setItem('user-info', JSON.stringify(doc.data()));
+                     });
+                 })
+                 .catch(function(error) {
+                     console.log("Error getting documents: ", error);
                  });
          }
      }

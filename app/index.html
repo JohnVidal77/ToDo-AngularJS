@@ -44,6 +44,7 @@
 
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/6.0.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.0.3/firebase-firestore.js"></script>
 <!--    <script defer src="/__/firebase/6.0.3/firebase-database.js"></script>-->
 <!--    <script defer src="/__/firebase/6.0.3/firebase-messaging.js"></script>-->
 <!--    <script defer src="/__/firebase/6.0.3/firebase-storage.js"></script>-->
@@ -52,6 +53,8 @@
     <script src="/__/firebase/init.js"></script>
 </head>
 <body ng-app="app">
+<script src="./app.config.js"></script>
+
 <!--ANGULAR & DEPENDECIES-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
 <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
@@ -68,11 +71,11 @@
 
 <script src="./app.module.js"></script>
 <script src="./app.route.js"></script>
-<script src="./app.config.js"></script>
 
 <!--Services-->
 <script src="./services/service.module.js"></script>
 <script src="./services/route.service.js"></script>
+<script src="./services/mask.service.js"></script>
 
 <!--Components-->
 <script src="./components/action-menu/action-menu.module.js"></script>

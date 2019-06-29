@@ -94,7 +94,13 @@
                 </svg>
             </div>
         </div>
-        <ul class="list-days">
+
+        <div class="create-task" ng-if="!vm.task">
+            <i class="far fa-calendar-plus"></i>
+            <h1>Create some task!</h1>
+        </div>
+
+        <ul class="list-days" ng-if="vm.task">
             <li ng-if="vm.tasks.today.length">
                 <h3>Today</h3>
                 <ul class="list-task-day">

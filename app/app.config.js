@@ -17,3 +17,13 @@
     // Setting this to false will disable console output
     window.__env.enableDebug = true;
 }(this));
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCzDmG1PE05AOmdBkTz83uRkJBOLz28zjw",
+    authDomain: "todone-bbc1e.firebaseapp.com",
+    databaseURL: "https://todone-bbc1e.firebaseio.com",
+    projectId: "todone-bbc1e",
+    storageBucket: "todone-bbc1e.appspot.com",
+    messagingSenderId: "543380855614",
+    appId: "1:543380855614:web:e633988a8930001b"
+};
