@@ -49,14 +49,17 @@
             <h3>Create Task</h3>
             <form name="TaskForm" ng-submit="vm.onClick_CreateTask()">
                 <div class="input-container">
-                    <input type="text" placeholder="Task Name">
+                    <input type="text" ng-model="vm.nameTask" placeholder="Task Name">
                 </div>
                 <div class="input-container">
-                    <input type="text" placeholder="Tags">
+                    <input type="text" ng-model="vm.tagsTask" placeholder="Tags">
                 </div>
                 <div class="input-container">
-                    <input type="text" ng-model="vm.dateTask" placeholder="When?" ng-keyup="vm.onActive_MaskDate(vm.dateTask)">
+                    <input type="text" id="date" ng-model="vm.dateTask" placeholder="When?" ng-keyup="vm.onActive_MaskDate(vm.dateTask)">
                 </div>
+                <p ng-if="vm.dateError === 1">Day invalid!</p>
+                <p ng-if="vm.dateError === 2">Month invalid!</p>
+                <p ng-if="vm.dateError === 3">Year invalid!</p>
                 <button>Create Task</button>
             </form>
         </div>

@@ -38,6 +38,8 @@
     text-align: center; }
   #Modal > .modal > .create-container > form > input {
     display: block; }
+  #Modal > .modal > .create-container > form > p {
+    color: red; }
   #Modal > .modal > .create-container > form > button {
     width: 100%;
     color: white;

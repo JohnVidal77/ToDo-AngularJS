@@ -62,6 +62,10 @@
     display: block;
   }
 
+  >.modal >.create-container >form >p {
+    color: red;
+  }
+
   >.modal >.create-container >form >button {
     width: 100%;
     color: white;

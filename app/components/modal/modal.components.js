@@ -11,9 +11,13 @@
 
     function ModalController($state, serviceMask) {
         const vm = this;
+        //const auth = firebase.auth();
+        const db = firebase.firestore();
 
         //vm.taskName = undefined;
         vm.goalView = false;
+        vm.dateError = 0;
+        vm.userUid = JSON.parse(localStorage.getItem("user-info")).uid;
         vm.getCreate = document.querySelectorAll(`div#Modal > div.modal > div.create-container`);
         vm.getFilter = document.querySelectorAll(`div#Modal > div.modal > div.filter-container`);
         vm.getGoal = document.querySelectorAll(`div#Modal > div.modal > div.goal-container`);
@@ -23,13 +27,27 @@
         vm.onClick_closeModal = onClick_closeModal;
         vm.onClick_changeView = onClick_changeView;
 
-        function onClick_CreateTask() {
+        console.log(vm.userUid);
 
+        function onClick_CreateTask() {
+            let tagsArray = vm.tagsTask.split(" "),
+                date = new Date(vm.dateTask),
+                task = {
+                name: vm.nameTask,
+                tags: tagsArray,
+                date: date
+            };
+
+            console.log(task);
+            //db.collection(`${vm.userUid}/`).doc().set(task);
         }
 
         function onActive_MaskDate(x) {
-            var y = serviceMask.dateDay(x);
-            vm.dateTask = y;
+            let dateValidated = serviceMask.dateDay(x);
+            console.log(dateValidated);
+
+            vm.dateError = dateValidated.error;
+            vm.dateTask = dateValidated.fullDate;
         }
 
         function onClick_closeModal() {
