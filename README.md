@@ -1,6 +1,6 @@
 # ToDo App AngularJS
 
-Basic ToDo app created with [AngularJS](https://angularjs.org/), [SASS](https://sass-lang.com/) and [Gulp](https://gulpjs.com/).
+Basic ToDo app created with [AngularJS](https://angularjs.org/) and [SASS](https://sass-lang.com/).
 
 ## Installation
 
@@ -10,18 +10,17 @@ Install project dependencies running:
 npm install
 ```
 
-## Gulp Commands
+## Basic Commands
 
-To facilitate the development, there is some Gulp tasks that can help.
+To facilitate the development, there is some NPM Scripts configurated.
 
 Use "run" to run the project with live reload and SASS compile.
 ```
-gulp run
+yarn run
 ```
-
-Use "create" to create new modules inside ./app with all necessary files and following the Naming Best Practices.
+or 
 ```
-gulp create --name your-module-name
+npm run
 ```
 
 ## Project Structure
