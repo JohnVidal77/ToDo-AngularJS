@@ -1,31 +1,6 @@
 # ToDo App AngularJS
 
-Basic ToDo app created with [AngularJS](https://angularjs.org/) and [SASS](https://sass-lang.com/).
-
-## Installation
-
-Install project dependencies running:
-
-```
-npm install
-```
-
-## Basic Commands
-
-To facilitate the development, there is some NPM Scripts configurated.
-
-Use "run" to run the project with live reload and SASS compile.
-```
-yarn run
-```
-or 
-```
-npm run
-```
-
-## Project Structure
-
-Coming Soon
+Basic ToDo app created with [AngularJS](https://angularjs.org/) and [SASS](https://sass-lang.com/). This project was created over 4 years ago, it was originally to study the angular structures (based on John Papa's articles) and connection with firebase. After some time without updating, I'll discontinue the project and a remake on React will be made.
 
 ## License
 
